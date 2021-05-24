@@ -7,7 +7,6 @@ class Pokemon(
 ) {
     var vida = vidaMaxima
     var estado = EstadoPokemon.NORMAL
-    var experiencia = 0
 
     fun atacar(nombreAtaque: String, otro: Pokemon) {
         AtaqueManager.resolverAtaque(nombreAtaque, this, otro)

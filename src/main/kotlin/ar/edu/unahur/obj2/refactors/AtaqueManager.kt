@@ -38,14 +38,5 @@ object AtaqueManager {
             atacante.estado = EstadoPokemon.DORMIDO
             atacante.vida = atacante.vidaMaxima
         }
-
-        // Si debilitó al enemigo...
-        if (atacado.vida <= 0) {
-            // y el atacante sigue vivo...
-            if (atacante.vida > 0) {
-                // le sumo 20 de experiencia al que ataca
-                atacante.experiencia += 20
-            }
-        }
     }
 }
