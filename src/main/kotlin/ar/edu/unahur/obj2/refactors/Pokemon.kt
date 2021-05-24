@@ -1,8 +1,7 @@
 package ar.edu.unahur.obj2.refactors
 
-// clase que representa a un Pokemon
 class Pokemon(
-    var vidaMaxima: Int, // la vida máxima es un Int
+    var vidaMaxima: Int,
     var ataqueBase: Double = 1.0
 ) {
     var vida = vidaMaxima
