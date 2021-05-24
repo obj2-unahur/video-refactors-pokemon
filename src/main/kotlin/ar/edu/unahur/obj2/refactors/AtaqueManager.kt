@@ -19,7 +19,7 @@ object AtaqueManager {
             error("No conozco ese nombre de ataque")
 
         // Puede atacar?
-        if (atacante.estado == EstadoPokemon.DORMIDO || atacante.vida <= 0 || atacado.vida <= 0)
+        if (atacante.estado == EstadoPokemon.DORMIDO || atacante.estaDebilitado() || atacado.estaDebilitado())
             return
 
         // Bajar vida necesaria
