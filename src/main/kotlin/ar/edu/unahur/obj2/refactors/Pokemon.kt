@@ -17,6 +17,9 @@ class Pokemon(
     fun dañoPara(potencia: Int) = (potencia * ataqueBase).roundToInt()
 
     fun atacar(ataque: Ataque, otro: Pokemon) {
-        AtaqueManager.resolverAtaque(ataque, this, otro)
+        if (!estado.puedeAtacar() || estaDebilitado() || otro.estaDebilitado())
+            return
+
+        ataque.atacar(this, estado.obtenerAtacado(this, otro))
     }
 }

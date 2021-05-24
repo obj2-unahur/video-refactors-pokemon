@@ -1,14 +1,5 @@
 package ar.edu.unahur.obj2.refactors
 
-object AtaqueManager {
-    fun resolverAtaque(ataque: Ataque, atacante: Pokemon, atacado: Pokemon) {
-        if (!atacante.estado.puedeAtacar() || atacante.estaDebilitado() || atacado.estaDebilitado())
-            return
-
-        ataque.atacar(atacante, atacante.estado.obtenerAtacado(atacante, atacado))
-    }
-}
-
 interface Ataque {
     fun atacar(atacante: Pokemon, atacado: Pokemon)
 }
